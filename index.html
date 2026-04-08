@@ -19,11 +19,7 @@
 
     /* NAVBAR RESPONSIVE */
     @media (max-width: 900px) {
-
-      .nav-toggle {
-        display: flex !important;
-      }
-
+      .nav-toggle { display: flex !important; }
       .nav-menu {
         position: absolute;
         top: 60px;
@@ -35,37 +31,44 @@
         padding: 20px 0;
         display: none !important;
       }
+      .nav-menu.active { display: flex !important; }
+      .nav-menu li { padding: 10px 0; }
+    }
 
-      .nav-menu.active {
-        display: flex !important;
-      }
+    /* Prevent menu items from wrapping and enable horizontal scroll on narrow screens */
+    .nav-menu {
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+      padding: 0 8px !important;
+      gap: 16px !important;
+    }
 
-      .nav-menu li {
-        padding: 10px 0;
-      }
+    /* Prevent link text from breaking to multiple lines */
+    .nav-menu a {
+      white-space: nowrap !important;
+      display: inline-block !important;
+      padding: 8px 6px !important;
+      font-size: 0.98rem !important;
     }
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR RESPONSIVE -->
 <nav class="navbar" style="background:#12324a; padding:14px 0; font-family:system-ui, sans-serif;">
   <div class="nav-container" style="max-width:1400px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 20px;">
 
-    <!-- LOGO -->
     <div class="nav-logo" style="color:#fff; font-size:1.2rem; font-weight:600;">
       Energia e Innovazione
     </div>
 
-    <!-- HAMBURGER -->
     <div class="nav-toggle" id="mobile-menu" style="display:none; flex-direction:column; cursor:pointer;">
       <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
       <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
       <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
     </div>
 
-    <!-- MENU -->
     <ul class="nav-menu" style="display:flex; gap:22px; list-style:none; margin:0; padding:0;">
       <li><a href="index.html" style="color:#fff; text-decoration:none; font-size:1rem;">Home</a></li>
       <li><a href="chi-siamo.html" style="color:#fff; text-decoration:none; font-size:1rem;">Chi Siamo</a></li>
@@ -74,6 +77,7 @@
       <li><a href="documentazione.html" style="color:#fff; text-decoration:none; font-size:1rem;">Documentazione</a></li>
       <li><a href="preventivi-forniture.html" style="color:#fff; text-decoration:none; font-size:1rem;">Preventivi e Forniture</a></li>
       <li><a href="assistenza-tecnica.html" style="color:#fff; text-decoration:none; font-size:1rem;">Assistenza Tecnica</a></li>
+	   <li><a href="manutenzione-contratti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Manutenzione e Contratti</a></li>
       <li><a href="dati-aziendali.html" style="color:#fff; text-decoration:none; font-size:1rem;">Dati Aziendali</a></li>
       <li><a href="network-gruppoenergiaeinnovazione.html" style="color:#fff; text-decoration:none; font-size:1rem;">Network</a></li>
       <li><a href="contatti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Contatti</a></li>
@@ -82,112 +86,104 @@
   </div>
 </nav>
 
-  <main class="page">
+<main class="page">
 
-    <!-- HERO -->
-    <header>
-      <h1>Energia e Innovazione</h1>
-      <p>
-        Impianti elettrici, climatizzazione, pubblica illuminazione e soluzioni tecnologiche certificate.
-        Professionalità, sicurezza e competenza al servizio di aziende, privati ed enti pubblici.
-      </p>
-    </header>
+  <header>
+    <h1>Energia e Innovazione</h1>
+    <p>
+      Impianti elettrici, climatizzazione, pubblica illuminazione e soluzioni tecnologiche certificate.
+      Professionalità e sicurezza per aziende, privati ed enti pubblici.
+    </p>
+  </header>
 
-    <!-- CHI SIAMO -->
-    <section class="section">
-      <h2>Chi Siamo</h2>
-      <p>
-        Energia e Innovazione di Salvia Benedetto è un’impresa artigiana specializzata in impianti elettrici,
-        climatizzazione, sistemi elettronici e soluzioni modulari. Attiva dal 2022, opera con abilitazioni
-        <strong>D.M. 37/2008 – Lettere A e B</strong>, garantendo interventi certificati e conformi alle normative vigenti.
-      </p>
-      <p>
-        L’azienda ha inoltre maturato esperienza nella <strong>manutenzione di impianti di pubblica illuminazione</strong>,
-        con interventi eseguiti per diversi Comuni della Sicilia.
-      </p>
-    </section>
+  <section class="section">
+  <h2>Chi Siamo</h2>
+  <p>
+    Energia e Innovazione di Salvia Benedetto è un’impresa specializzata in impianti elettrici,
+    climatizzazione e soluzioni tecnologiche modulari. Operiamo con abilitazioni D.M. 37/2008 e
+    offriamo servizi certificati per aziende, enti pubblici e privati.
+  </p>
+  <p>
+    <a href="chi-siamo.html" style="color:#1b7bb8; text-decoration:none;">Scopri di più su di noi</a>
+  </p>
+</section>
 
-    <!-- SERVIZI PRINCIPALI -->
-    <section class="section">
-      <h2>Servizi Principali</h2>
 
-      <div class="services-grid">
-        <div class="service-box">
-          <h3>Impianti Elettrici</h3>
-          <p>Installazione, manutenzione e adeguamento di impianti elettrici civili e industriali.</p>
-        </div>
+  <section class="section">
+    <h2>Servizi Principali</h2>
 
-        <div class="service-box">
-          <h3>Climatizzazione</h3>
-          <p>Installazione e manutenzione di sistemi di condizionamento per abitazioni e aziende.</p>
-        </div>
-
-        <div class="service-box">
-          <h3>Pubblica Illuminazione</h3>
-          <p>Manutenzione e interventi tecnici per impianti di illuminazione pubblica.</p>
-        </div>
-
-        <div class="service-box">
-          <h3>Impianti Radiotelevisivi</h3>
-          <p>Installazione e riparazione di antenne e sistemi radiotelevisivi.</p>
-        </div>
-
-        <div class="service-box">
-          <h3>Soluzioni Modulari</h3>
-          <p>Pavimentazioni modulari, porte REI rimovibili e allestimenti tecnici.</p>
-        </div>
-
-        <div class="service-box">
-          <h3>Assistenza Tecnica</h3>
-          <p>Supporto rapido, manutenzione programmata e interventi urgenti.</p>
-        </div>
+    <div class="services-grid">
+      <div class="service-box">
+        <h3>Impianti Elettrici</h3>
+        <p>Installazione e adeguamento di impianti elettrici civili e industriali.</p>
       </div>
-    </section>
 
-    <!-- ESPERIENZA PUBBLICA ILLUMINAZIONE -->
-    <section class="section">
-      <h2>Esperienza nella Pubblica Illuminazione</h2>
-      <p>
-        L’azienda ha eseguito opere e servizi di illuminazione pubblica per:
-      </p>
-      <ul>
-        <li>Comune di Santa Margherita di Belice</li>
-        <li>Comune di Lercara Friddi</li>
-        <li>Comune di Roccapalumba</li>
-        <li>Comune di Castronovo di Sicilia</li>
-      </ul>
-      <p>
-        Interventi eseguiti: manutenzione ordinaria e straordinaria, sostituzione corpi illuminanti,
-        riparazioni urgenti, adeguamenti normativi e verifiche tecniche.
-      </p>
-    </section>
+      <div class="service-box">
+        <h3>Climatizzazione</h3>
+        <p>Installazione e manutenzione di sistemi di condizionamento.</p>
+      </div>
 
-    <!-- CTA -->
-    <section class="cta">
-      <h2>Richiedi un Preventivo</h2>
-      <p>Contattaci per un sopralluogo o una consulenza tecnica.</p>
-      <a href="contatti.html">Contatti</a>
-    </section>
+      <div class="service-box">
+        <h3>Pubblica Illuminazione</h3>
+        <p>Interventi tecnici e manutentivi su impianti di illuminazione pubblica.</p>
+      </div>
 
-  </main>
-  <footer style="background:#12324a; color:#fff; padding:40px 20px; margin-top:40px;">
+      <div class="service-box">
+        <h3>Impianti Radiotelevisivi</h3>
+        <p>Installazione e riparazione di antenne e sistemi radiotelevisivi.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Soluzioni Modulari</h3>
+        <p>Pavimentazioni modulari, porte REI rimovibili e allestimenti tecnici.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Assistenza Tecnica</h3>
+        <p>Supporto rapido e interventi tecnici dedicati.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Esperienza nella Pubblica Illuminazione</h2>
+    <p>L’azienda ha eseguito opere e servizi di illuminazione pubblica per:</p>
+    <ul>
+      <li>Comune di Santa Margherita di Belice</li>
+      <li>Comune di Lercara Friddi</li>
+      <li>Comune di Roccapalumba</li>
+      <li>Comune di Castronovo di Sicilia</li>
+    </ul>
+    <p>
+      Interventi eseguiti: manutenzione ordinaria e straordinaria, sostituzione corpi illuminanti,
+      riparazioni urgenti e adeguamenti normativi.
+    </p>
+  </section>
+
+  <section class="cta">
+    <h2>Richiedi un Preventivo</h2>
+    <p>Contattaci per un sopralluogo o una consulenza tecnica.</p>
+    <a href="contatti.html">Contatti</a>
+  </section>
+
+</main>
+
+<footer style="background:#12324a; color:#fff; padding:40px 20px; margin-top:40px;">
+<p style="margin-top:12px;">
+  <a href="privacy-policy.html" style="color:#fff; text-decoration:none;">Privacy</a> |
+  <a href="cookie-policy.html" style="color:#fff; text-decoration:none;">Cookie Policy</a>
+</p>
   <div style="max-width:1100px; margin:0 auto; display:flex; flex-wrap:wrap; gap:40px;">
 
-    <!-- COLONNA 1 -->
     <div style="flex:1; min-width:220px;">
       <h3 style="margin-top:0; font-size:1.2rem;">Energia e Innovazione</h3>
       <p style="opacity:0.9;">
-        Impianti elettrici, climatizzazione, pubblica illuminazione, soluzioni tecnologiche certificate, soluzioni modulari, porte REI rimovibili e allestimenti tecnici.
-
-Assistenza Tecnica
-Supporto rapido, manutenzione programmata e interventi urgenti.
+        Impianti elettrici, climatizzazione, pubblica illuminazione, soluzioni tecnologiche certificate,
+        soluzioni modulari e allestimenti tecnici.
       </p>
-      <p style="opacity:0.9;">
-        P.IVA: 07023390821
-      </p>
+      <p style="opacity:0.9;">P.IVA: 07023390821</p>
     </div>
 
-    <!-- COLONNA 2 -->
     <div style="flex:1; min-width:220px;">
       <h3 style="margin-top:0; font-size:1.2rem;">Navigazione</h3>
       <p><a href="index.html" style="color:#fff; text-decoration:none;">Home</a></p>
@@ -200,7 +196,6 @@ Supporto rapido, manutenzione programmata e interventi urgenti.
       <p><a href="contatti.html" style="color:#fff; text-decoration:none;">Contatti</a></p>
     </div>
 
-    <!-- COLONNA 3 -->
     <div style="flex:1; min-width:220px;">
       <h3 style="margin-top:0; font-size:1.2rem;">Contatti</h3>
       <p style="opacity:0.9;">Telefono: +39.379.128.36.43</p>

@@ -5,38 +5,90 @@
   <title>Cookie Policy - Energia e Innovazione</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Cookie Policy di Energia e Innovazione di Salvia Benedetto, conforme al GDPR." />
-  <style>
+   <style>
     body { font-family: system-ui, sans-serif; margin: 0; padding: 0; background: #f7f7f7; color: #222; line-height: 1.6; }
     .page { max-width: 960px; margin: 0 auto; padding: 32px 16px 48px; background: #fff; }
-    h1, h2 { color: #12324a; margin-top: 0; }
+    h1, h2, h3 { color: #12324a; margin-top: 0; }
     h1 { font-size: 2rem; margin-bottom: 0.5rem; }
     h2 { font-size: 1.4rem; margin-top: 2rem; }
     p { margin: 0.4rem 0 0.8rem; }
     ul { padding-left: 1.2rem; }
     li { margin-bottom: 0.4rem; }
+    .section { margin-bottom: 2rem; }
+    .work-box { background: #f0f6fa; border-left: 4px solid #1b7bb8; padding: 1rem 1.25rem; border-radius: 4px; margin-bottom: 1.5rem; }
+
+    /* NAVBAR RESPONSIVE */
+    @media (max-width: 900px) {
+      .nav-toggle { display: flex !important; }
+      .nav-menu {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #12324a;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        display: none !important;
+      }
+      .nav-menu.active { display: flex !important; }
+      .nav-menu li { padding: 10px 0; }
+    }
+
+    /* Prevent menu items from wrapping and enable horizontal scroll on narrow screens */
+    .nav-menu {
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+      padding: 0 8px !important;
+      gap: 16px !important;
+    }
+
+    /* Prevent link text from breaking to multiple lines */
+    .nav-menu a {
+      white-space: nowrap !important;
+      display: inline-block !important;
+      padding: 8px 6px !important;
+      font-size: 0.98rem !important;
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav style="background:#12324a; padding:14px 0;">
-    <div style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 20px;">
-      <div style="color:#fff; font-size:1.2rem; font-weight:600;">Energia e Innovazione</div>
-      <div style="display:flex; gap:22px;">
-        <a href="index.html" style="color:#fff; text-decoration:none;">Home</a>
-        <a href="chi-siamo.html" style="color:#fff; text-decoration:none;">Chi Siamo</a>
-        <a href="certificazioni.html" style="color:#fff; text-decoration:none;">Certificazioni</a>
-        <a href="lavori-eseguiti.html" style="color:#fff; text-decoration:none;">Lavori Eseguiti</a>
-        <a href="preventivi-forniture.html" style="color:#fff; text-decoration:none;">Preventivi e Forniture</a>
-        <a href="assistenza-tecnica.html" style="color:#fff; text-decoration:none;">Assistenza Tecnica</a>
-        <a href="documentazione.html" style="color:#fff; text-decoration:none;">Documentazione</a>
-        <a href="privacy-policy.html" style="color:#fff; text-decoration:none;">Privacy Policy</a>
-        <a href="cookie-policy.html" style="color:#fff; text-decoration:none;">Cookie Policy</a>
-        <a href="contatti.html" style="color:#fff; text-decoration:none;">Contatti</a>
-      </div>
+<!-- NAVBAR RESPONSIVE -->
+<nav class="navbar" style="background:#12324a; padding:14px 0; font-family:system-ui, sans-serif;">
+  <div class="nav-container" style="max-width:1400px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 20px;">
+
+    <!-- LOGO -->
+    <div class="nav-logo" style="color:#fff; font-size:1.2rem; font-weight:600;">
+      Energia e Innovazione
     </div>
-  </nav>
+
+    <!-- HAMBURGER -->
+    <div class="nav-toggle" id="mobile-menu" style="display:none; flex-direction:column; cursor:pointer;">
+      <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
+      <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
+      <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
+    </div>
+
+    <!-- MENU -->
+    <ul class="nav-menu" style="display:flex; gap:22px; list-style:none; margin:0; padding:0;">
+      <li><a href="index.html" style="color:#fff; text-decoration:none; font-size:1rem;">Home</a></li>
+      <li><a href="chi-siamo.html" style="color:#fff; text-decoration:none; font-size:1rem;">Chi Siamo</a></li>
+      <li><a href="certificazioni.html" style="color:#fff; text-decoration:none; font-size:1rem;">Certificazioni</a></li>
+      <li><a href="lavori-eseguiti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Lavori Eseguiti</a></li>
+      <li><a href="documentazione.html" style="color:#fff; text-decoration:none; font-size:1rem;">Documentazione</a></li>
+      <li><a href="preventivi-forniture.html" style="color:#fff; text-decoration:none; font-size:1rem;">Preventivi e Forniture</a></li>
+      <li><a href="assistenza-tecnica.html" style="color:#fff; text-decoration:none; font-size:1rem;">Assistenza Tecnica</a></li>
+	   <li><a href="manutenzione-contratti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Manutenzione e Contratti</a></li>
+      <li><a href="dati-aziendali.html" style="color:#fff; text-decoration:none; font-size:1rem;">Dati Aziendali</a></li>	  
+      <li><a href="network-gruppoenergiaeinnovazione.html" style="color:#fff; text-decoration:none; font-size:1rem;">Network</a></li>
+      <li><a href="contatti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Contatti</a></li>
+    </ul>
+
+  </div>
+</nav>
 
   <main class="page">
 
@@ -94,6 +146,53 @@
     </p>
 
   </main>
+  <footer style="background:#12324a; color:#fff; padding:40px 20px; margin-top:40px;">
+<p style="margin-top:12px;">
+  <a href="privacy-policy.html" style="color:#fff; text-decoration:none;">Privacy</a> |
+  <a href="cookie-policy.html" style="color:#fff; text-decoration:none;">Cookie Policy</a>
+</p>
+
+  <div style="max-width:1100px; margin:0 auto; display:flex; flex-wrap:wrap; gap:40px;">
+
+    <!-- COLONNA 1 -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="margin-top:0; font-size:1.2rem;">Energia e Innovazione</h3>
+      <p style="opacity:0.9;">
+        Impianti elettrici, climatizzazione, pubblica illuminazione, soluzioni tecnologiche certificate, soluzioni modulari, porte REI rimovibili e allestimenti tecnici.
+      </p>
+      <p style="opacity:0.9;">
+        P.IVA: 07023390821
+      </p>
+    </div>
+
+    <!-- COLONNA 2 -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="margin-top:0; font-size:1.2rem;">Navigazione</h3>
+      <p><a href="index.html" style="color:#fff; text-decoration:none;">Home</a></p>
+      <p><a href="chi-siamo.html" style="color:#fff; text-decoration:none;">Chi Siamo</a></p>
+      <p><a href="certificazioni.html" style="color:#fff; text-decoration:none;">Certificazioni</a></p>
+      <p><a href="lavori-eseguiti.html" style="color:#fff; text-decoration:none;">Lavori Eseguiti</a></p>
+      <p><a href="preventivi-forniture.html" style="color:#fff; text-decoration:none;">Preventivi e Forniture</a></p>
+      <p><a href="assistenza-tecnica.html" style="color:#fff; text-decoration:none;">Assistenza Tecnica</a></p>
+      <p><a href="documentazione.html" style="color:#fff; text-decoration:none;">Documentazione</a></p>
+      <p><a href="contatti.html" style="color:#fff; text-decoration:none;">Contatti</a></p>
+    </div>
+
+    <!-- COLONNA 3 -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="margin-top:0; font-size:1.2rem;">Contatti</h3>
+      <p style="opacity:0.9;">Telefono: +39.379.128.36.43</p>
+      <p style="opacity:0.9;">Email: info@gruppoenergiaeinnovazione.it</p>
+      <p style="opacity:0.9;">PEC: ide.sd@pec.it</p>
+      <p style="opacity:0.9;">Sede: Contrada Incastrone, Partinico (PA)</p>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:30px; opacity:0.7; font-size:0.9rem;">
+    © 2024 Energia e Innovazione – Tutti i diritti riservati
+  </div>
+</footer>
 
 </body>
 </html>

@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <title>Chi Siamo – Energia e Innovazione di Salvia Benedetto</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Energia e Innovazione di Salvia Benedetto: impianti elettrici, climatizzazione e servizi tecnologici certificati DM 37/2008.">
+  <meta name="description" content="Energia e Innovazione di Salvia Benedetto: impianti elettrici, climatizzazione e soluzioni tecnologiche certificate DM 37/2008.">
 
-  <style>
+ <style>
     body { font-family: system-ui, sans-serif; margin: 0; padding: 0; background: #f7f7f7; color: #222; line-height: 1.6; }
     .page { max-width: 960px; margin: 0 auto; padding: 32px 16px 48px; background: #fff; }
     h1, h2, h3 { color: #12324a; margin-top: 0; }
@@ -35,43 +35,61 @@
       .nav-menu.active { display: flex !important; }
       .nav-menu li { padding: 10px 0; }
     }
+
+    /* Prevent menu items from wrapping and enable horizontal scroll on narrow screens */
+    .nav-menu {
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+      padding: 0 8px !important;
+      gap: 16px !important;
+    }
+
+    /* Prevent link text from breaking to multiple lines */
+    .nav-menu a {
+      white-space: nowrap !important;
+      display: inline-block !important;
+      padding: 8px 6px !important;
+      font-size: 0.98rem !important;
+    }
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR RESPONSIVE -->
-<nav class="navbar" style="background:#12324a; padding:14px 0; font-family:system-ui, sans-serif;">
-  <div class="nav-container" style="max-width:1400px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 20px;">
+ <!-- NAVBAR RESPONSIVE -->
+  <nav class="navbar" style="background:#12324a; padding:14px 0; font-family:system-ui, sans-serif;">
+    <div class="nav-container" style="max-width:1400px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 20px;">
 
-    <!-- LOGO -->
-    <div class="nav-logo" style="color:#fff; font-size:1.2rem; font-weight:600;">
-      Energia e Innovazione
+      <!-- LOGO -->
+      <div class="nav-logo" style="color:#fff; font-size:1.2rem; font-weight:600;">
+        Energia e Innovazione
+      </div>
+
+      <!-- HAMBURGER -->
+      <div class="nav-toggle" id="mobile-menu" style="display:none; flex-direction:column; cursor:pointer;">
+        <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
+        <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
+        <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
+      </div>
+
+      <!-- MENU -->
+      <ul class="nav-menu" style="display:flex; gap:22px; list-style:none; margin:0; padding:0;">
+        <li><a href="index.html" style="color:#fff; text-decoration:none; font-size:1rem;">Home</a></li>
+        <li><a href="chi-siamo.html" style="color:#fff; text-decoration:none; font-size:1rem;">Chi Siamo</a></li>
+        <li><a href="certificazioni.html" style="color:#fff; text-decoration:none; font-size:1rem;">Certificazioni</a></li>
+        <li><a href="lavori-eseguiti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Lavori Eseguiti</a></li>
+        <li><a href="documentazione.html" style="color:#fff; text-decoration:none; font-size:1rem;">Documentazione</a></li>
+        <li><a href="preventivi-forniture.html" style="color:#fff; text-decoration:none; font-size:1rem;">Preventivi e Forniture</a></li>
+        <li><a href="assistenza-tecnica.html" style="color:#fff; text-decoration:none; font-size:1rem;">Assistenza Tecnica</a></li>
+        <li><a href="manutenzione-contratti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Manutenzione e Contratti</a></li>
+        <li><a href="dati-aziendali.html" style="color:#fff; text-decoration:none; font-size:1rem;">Dati Aziendali</a></li>
+        <li><a href="network-gruppoenergiaeinnovazione.html" style="color:#fff; text-decoration:none; font-size:1rem;">Network</a></li>
+        <li><a href="contatti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Contatti</a></li>
+      </ul>
+
     </div>
-
-    <!-- HAMBURGER -->
-    <div class="nav-toggle" id="mobile-menu" style="display:none; flex-direction:column; cursor:pointer;">
-      <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
-      <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
-      <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
-    </div>
-
-    <!-- MENU -->
-    <ul class="nav-menu" style="display:flex; gap:22px; list-style:none; margin:0; padding:0;">
-      <li><a href="index.html" style="color:#fff; text-decoration:none; font-size:1rem;">Home</a></li>
-      <li><a href="chi-siamo.html" style="color:#fff; text-decoration:none; font-size:1rem;">Chi Siamo</a></li>
-      <li><a href="certificazioni.html" style="color:#fff; text-decoration:none; font-size:1rem;">Certificazioni</a></li>
-      <li><a href="lavori-eseguiti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Lavori Eseguiti</a></li>
-      <li><a href="documentazione.html" style="color:#fff; text-decoration:none; font-size:1rem;">Documentazione</a></li>
-      <li><a href="preventivi-forniture.html" style="color:#fff; text-decoration:none; font-size:1rem;">Preventivi e Forniture</a></li>
-      <li><a href="assistenza-tecnica.html" style="color:#fff; text-decoration:none; font-size:1rem;">Assistenza Tecnica</a></li>
-      <li><a href="dati-aziendali.html" style="color:#fff; text-decoration:none; font-size:1rem;">Dati Aziendali</a></li>
-      <li><a href="network-gruppoenergiaeinnovazione.html" style="color:#fff; text-decoration:none; font-size:1rem;">Network</a></li>
-      <li><a href="contatti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Contatti</a></li>
-    </ul>
-
-  </div>
-</nav>
+  </nav>
 
 <main class="page">
 
@@ -84,21 +102,24 @@
     </p>
 
     <p>
-      Energia e Innovazione opera all’interno del network tecnico <strong>gruppoenergiaeinnovazione</strong>, una rete di professionisti e partner qualificati che collaborano per garantire certificazioni, verifiche specialistiche e documentazione avanzata anche oltre le abilitazioni DM 37/2008. Questo modello operativo assicura continuità, affidabilità e conformità normativa in ogni intervento.
+      L’azienda integra le proprie competenze con il network tecnico <strong>gruppoenergiaeinnovazione</strong>,
+      una rete di professionisti e partner qualificati che supportano la gestione di
+      <a href="certificazioni.html" style="color:#1b7bb8; text-decoration:none;">certificazioni</a>,
+      verifiche specialistiche e documentazione avanzata. Questo modello operativo garantisce continuità,
+      affidabilità e piena conformità normativa.
     </p>
   </header>
 
   <section class="section">
     <h2>La nostra storia</h2>
     <p>
-      L’azienda nasce nel 2022 con l’obiettivo di offrire servizi tecnici affidabili e certificati, rivolti sia
-      ai privati che alle aziende e agli enti pubblici. Grazie alle abilitazioni <strong>D.M. 37/2008 – Lettere A e B</strong>,
-      Energia e Innovazione garantisce interventi conformi alle normative vigenti e realizzati con materiali
-      certificati.
+      Fondata nel 2022, l’azienda nasce con l’obiettivo di offrire servizi tecnici affidabili e certificati
+      per privati, aziende ed enti pubblici. Grazie alle abilitazioni <strong>D.M. 37/2008 – Lettere A e B</strong>,
+      assicuriamo interventi conformi alle normative vigenti e realizzati con materiali certificati.
     </p>
     <p>
-      Nel corso degli anni abbiamo ampliato le nostre competenze, integrando servizi di climatizzazione,
-      impianti radiotelevisivi, soluzioni modulari e assistenza tecnica specializzata.
+      Nel tempo abbiamo ampliato le nostre competenze, integrando climatizzazione, impianti radiotelevisivi,
+      soluzioni modulari e assistenza tecnica specializzata.
     </p>
   </section>
 
@@ -120,10 +141,9 @@
   <section class="section">
     <h2>Esperienza nella Pubblica Illuminazione</h2>
     <p>
-      Energia e Innovazione ha maturato una solida esperienza nella manutenzione e gestione di
-      <strong>impianti di pubblica illuminazione</strong>, operando per diversi Comuni della Sicilia.
+      L’azienda ha maturato una solida esperienza nella gestione e manutenzione di impianti di pubblica
+      illuminazione, operando per diversi Comuni della Sicilia.
     </p>
-    <p>Tra i principali lavori eseguiti:</p>
     <ul>
       <li>Comune di Santa Margherita di Belice</li>
       <li>Comune di Lercara Friddi</li>
@@ -132,15 +152,15 @@
     </ul>
     <p>
       Le attività includono manutenzione ordinaria e straordinaria, sostituzione corpi illuminanti,
-      riparazioni urgenti, adeguamenti normativi e verifiche tecniche.
+      riparazioni urgenti e adeguamenti normativi.
     </p>
   </section>
 
   <section class="section">
     <h2>I nostri valori</h2>
     <ul>
-      <li><strong>Professionalità</strong> – Interventi eseguiti da tecnici qualificati e certificati.</li>
-      <li><strong>Sicurezza</strong> – Rispetto rigoroso delle normative e utilizzo di materiali certificati.</li>
+      <li><strong>Professionalità</strong> – Interventi eseguiti da tecnici qualificati.</li>
+      <li><strong>Sicurezza</strong> – Rispetto rigoroso delle normative e materiali certificati.</li>
       <li><strong>Affidabilità</strong> – Assistenza continua e interventi rapidi.</li>
       <li><strong>Innovazione</strong> – Soluzioni moderne, modulari e orientate all’efficienza.</li>
     </ul>
@@ -149,12 +169,17 @@
 </main>
 
 <footer style="background:#12324a; color:#fff; padding:40px 20px; margin-top:40px;">
+<p style="margin-top:12px;">
+  <a href="privacy-policy.html" style="color:#fff; text-decoration:none;">Privacy</a> |
+  <a href="cookie-policy.html" style="color:#fff; text-decoration:none;">Cookie Policy</a>
+</p>
   <div style="max-width:1400px; margin:0 auto; display:flex; flex-wrap:wrap; gap:40px;">
 
     <div style="flex:1; min-width:220px;">
       <h3 style="margin-top:0; font-size:1.2rem;">Energia e Innovazione</h3>
       <p style="opacity:0.9;">
-        Impianti elettrici, climatizzazione, pubblica illuminazione, soluzioni tecnologiche certificate, soluzioni modulari, porte REI rimovibili e allestimenti tecnici.
+        Impianti elettrici, climatizzazione, pubblica illuminazione, soluzioni tecnologiche certificate,
+        soluzioni modulari e allestimenti tecnici.
       </p>
       <p style="opacity:0.9;">P.IVA: 07023390821</p>
     </div>
@@ -186,7 +211,6 @@
   </div>
 </footer>
 
-<!-- SCRIPT MENU RESPONSIVE -->
 <script>
 const mobileMenu = document.getElementById("mobile-menu");
 const navMenu = document.querySelector(".nav-menu");
