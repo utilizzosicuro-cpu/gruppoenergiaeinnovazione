@@ -5,53 +5,79 @@
   <title>Chi Siamo – Energia e Innovazione di Salvia Benedetto</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Energia e Innovazione di Salvia Benedetto: impianti elettrici, climatizzazione e servizi tecnologici certificati DM 37/2008.">  <style>
-<style>  
-  body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #222; background: #f7f7f7; }
+<style>
+    body { font-family: system-ui, sans-serif; margin: 0; padding: 0; background: #f7f7f7; color: #222; line-height: 1.6; }
     .page { max-width: 960px; margin: 0 auto; padding: 32px 16px 48px; background: #fff; }
     h1, h2, h3 { color: #12324a; margin-top: 0; }
     h1 { font-size: 2rem; margin-bottom: 0.5rem; }
     h2 { font-size: 1.4rem; margin-top: 2rem; }
     p { margin: 0.4rem 0 0.8rem; }
-    ul { padding-left: 1.2rem; margin: 0.4rem 0 1rem; }
-    li { margin-bottom: 0.25rem; }
+    ul { padding-left: 1.2rem; }
+    li { margin-bottom: 0.4rem; }
     .section { margin-bottom: 2rem; }
-    .cert-box { background: #f0f6fa; border-left: 4px solid #1b7bb8; padding: 1rem 1.25rem; border-radius: 4px; margin-bottom: 1.5rem; }
+    .work-box { background: #f0f6fa; border-left: 4px solid #1b7bb8; padding: 1rem 1.25rem; border-radius: 4px; margin-bottom: 1.5rem; }
+
+    /* NAVBAR RESPONSIVE */
+    @media (max-width: 900px) {
+
+      .nav-toggle {
+        display: flex !important;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #12324a;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        display: none !important;
+      }
+
+      .nav-menu.active {
+        display: flex !important;
+      }
+
+      .nav-menu li {
+        padding: 10px 0;
+      }
+    }
   </style>
 </head>
 
 <body>
-<nav style="
-  background:#12324a;
-  padding: 14px 0;
-  font-family: system-ui, sans-serif;
-">
-  <div style="
-    max-width:1400px;
-    margin:0 auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 20px;
-  ">
-    
-    <!-- LOGO / NOME AZIENDA -->
-    <div style="color:#fff; font-size:1.2rem; font-weight:600;">
+
+<!-- NAVBAR RESPONSIVE -->
+<nav class="navbar" style="background:#12324a; padding:14px 0; font-family:system-ui, sans-serif;">
+  <div class="nav-container" style="max-width:1400px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 20px;">
+
+    <!-- LOGO -->
+    <div class="nav-logo" style="color:#fff; font-size:1.2rem; font-weight:600;">
       Energia e Innovazione
     </div>
 
-    <!-- MENU -->
-    <div style="display:flex; gap:22px;">
-    <a href="index.html" style="color:#fff; text-decoration:none; font-size:1rem;">Home</a>
-      <a href="chi-siamo.html" style="color:#fff; text-decoration:none; font-size:1rem;">Chi Siamo</a>
-      <a href="certificazioni.html" style="color:#fff; text-decoration:none; font-size:1rem;">Certificazioni</a>
-	  <a href="lavori-eseguiti.html" style="color:#fff; text-decoration:none;">Lavori Eseguiti</a>
-      <a href="documentazione.html" style="color:#fff; text-decoration:none;">Documentazione</a>
-      <a href="preventivi-forniture.html" style="color:#fff; text-decoration:none; font-size:1rem;">Preventivi e Forniture</a>
-      <a href="assistenza-tecnica.html" style="color:#fff; text-decoration:none; font-size:1rem;">Assistenza Tecnica</a>
-	  <a href="dati-aziendali.html" style="color:#fff; text-decoration:none; font-size:0.95rem;">Dati Aziendali</a>
-      <a href="network-gruppoenergiaeinnovazione.html" style="color:#fff; text-decoration:none; font-size:0.95rem;">Network</a>
-      <a href="contatti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Contatti</a>
+    <!-- HAMBURGER -->
+    <div class="nav-toggle" id="mobile-menu" style="display:none; flex-direction:column; cursor:pointer;">
+      <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
+      <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
+      <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
     </div>
+
+    <!-- MENU -->
+    <ul class="nav-menu" style="display:flex; gap:22px; list-style:none; margin:0; padding:0;">
+      <li><a href="index.html" style="color:#fff; text-decoration:none; font-size:1rem;">Home</a></li>
+      <li><a href="chi-siamo.html" style="color:#fff; text-decoration:none; font-size:1rem;">Chi Siamo</a></li>
+      <li><a href="certificazioni.html" style="color:#fff; text-decoration:none; font-size:1rem;">Certificazioni</a></li>
+      <li><a href="lavori-eseguiti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Lavori Eseguiti</a></li>
+      <li><a href="documentazione.html" style="color:#fff; text-decoration:none; font-size:1rem;">Documentazione</a></li>
+      <li><a href="preventivi-forniture.html" style="color:#fff; text-decoration:none; font-size:1rem;">Preventivi e Forniture</a></li>
+      <li><a href="assistenza-tecnica.html" style="color:#fff; text-decoration:none; font-size:1rem;">Assistenza Tecnica</a></li>
+      <li><a href="dati-aziendali.html" style="color:#fff; text-decoration:none; font-size:1rem;">Dati Aziendali</a></li>
+      <li><a href="network-gruppoenergiaeinnovazione.html" style="color:#fff; text-decoration:none; font-size:1rem;">Network</a></li>
+      <li><a href="contatti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Contatti</a></li>
+    </ul>
 
   </div>
 </nav>
