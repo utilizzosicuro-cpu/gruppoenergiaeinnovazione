@@ -5,6 +5,7 @@
   <title>Lavori Eseguiti – Pubblica Illuminazione e Impianti Tecnologici</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Interventi certificati di pubblica illuminazione e impianti tecnologici per Comuni e privati in Sicilia.">
+
   <style>
     body { font-family: system-ui, sans-serif; margin: 0; padding: 0; background: #f7f7f7; color: #222; line-height: 1.6; }
     .page { max-width: 960px; margin: 0 auto; padding: 32px 16px 48px; background: #fff; }
@@ -15,109 +16,213 @@
     ul { padding-left: 1.2rem; }
     li { margin-bottom: 0.4rem; }
     .section { margin-bottom: 2rem; }
-    .doc-box { background: #f0f6fa; border-left: 4px solid #1b7bb8; padding: 1rem 1.25rem; border-radius: 4px; margin-bottom: 1.5rem; }
+    .work-box { background: #f0f6fa; border-left: 4px solid #1b7bb8; padding: 1rem 1.25rem; border-radius: 4px; margin-bottom: 1.5rem; }
+
+    /* NAVBAR RESPONSIVE */
+    @media (max-width: 900px) {
+
+      .nav-toggle {
+        display: flex !important;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #12324a;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        display: none !important;
+      }
+
+      .nav-menu.active {
+        display: flex !important;
+      }
+
+      .nav-menu li {
+        padding: 10px 0;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav style="background:#12324a; padding:14px 0;">
-    <div style="max-width:1400px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 20px;">
-      <div style="color:#fff; font-size:1.2rem; font-weight:600;">Energia e Innovazione</div>
-      <div style="display:flex; gap:22px;">
-        <a href="index.html" style="color:#fff; text-decoration:none; font-size:1rem;">Home</a>
-      <a href="chi-siamo.html" style="color:#fff; text-decoration:none; font-size:1rem;">Chi Siamo</a>
-      <a href="certificazioni.html" style="color:#fff; text-decoration:none; font-size:1rem;">Certificazioni</a>
-	  <a href="lavori-eseguiti.html" style="color:#fff; text-decoration:none;">Lavori Eseguiti</a>
-      <a href="documentazione.html" style="color:#fff; text-decoration:none;">Documentazione</a>
-      <a href="preventivi-forniture.html" style="color:#fff; text-decoration:none; font-size:1rem;">Preventivi e Forniture</a>
-      <a href="assistenza-tecnica.html" style="color:#fff; text-decoration:none; font-size:1rem;">Assistenza Tecnica</a>
-	  <a href="dati-aziendali.html" style="color:#fff; text-decoration:none; font-size:0.95rem;">Dati Aziendali</a>
-      <a href="network-gruppoenergiaeinnovazione.html" style="color:#fff; text-decoration:none; font-size:0.95rem;">Network</a>
-      <a href="contatti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Contatti</a>
-      </div>
+<!-- NAVBAR RESPONSIVE -->
+<nav class="navbar" style="background:#12324a; padding:14px 0; font-family:system-ui, sans-serif;">
+  <div class="nav-container" style="max-width:1400px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 20px;">
+
+    <!-- LOGO -->
+    <div class="nav-logo" style="color:#fff; font-size:1.2rem; font-weight:600;">
+      Energia e Innovazione
     </div>
-  </nav>
 
-  <main class="page">
+    <!-- HAMBURGER -->
+    <div class="nav-toggle" id="mobile-menu" style="display:none; flex-direction:column; cursor:pointer;">
+      <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
+      <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
+      <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
+    </div>
 
-    <header class="section">
-      <h1>Lavori Eseguiti</h1>
-      <p>
-        Una selezione dei principali interventi realizzati da Energia e Innovazione, tra impianti elettrici,
-        climatizzazione, pubblica illuminazione e soluzioni tecnologiche modulari.
-      </p>
-    </header>
+    <!-- MENU -->
+    <ul class="nav-menu" style="display:flex; gap:22px; list-style:none; margin:0; padding:0;">
+      <li><a href="index.html" style="color:#fff; text-decoration:none; font-size:1rem;">Home</a></li>
+      <li><a href="chi-siamo.html" style="color:#fff; text-decoration:none; font-size:1rem;">Chi Siamo</a></li>
+      <li><a href="certificazioni.html" style="color:#fff; text-decoration:none; font-size:1rem;">Certificazioni</a></li>
+      <li><a href="lavori-eseguiti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Lavori Eseguiti</a></li>
+      <li><a href="documentazione.html" style="color:#fff; text-decoration:none; font-size:1rem;">Documentazione</a></li>
+      <li><a href="preventivi-forniture.html" style="color:#fff; text-decoration:none; font-size:1rem;">Preventivi e Forniture</a></li>
+      <li><a href="assistenza-tecnica.html" style="color:#fff; text-decoration:none; font-size:1rem;">Assistenza Tecnica</a></li>
+      <li><a href="dati-aziendali.html" style="color:#fff; text-decoration:none; font-size:1rem;">Dati Aziendali</a></li>
+      <li><a href="network-gruppoenergiaeinnovazione.html" style="color:#fff; text-decoration:none; font-size:1rem;">Network</a></li>
+      <li><a href="contatti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Contatti</a></li>
+    </ul>
 
-    <section class="section">
-      <h2>Pubblica Illuminazione</h2>
+  </div>
+</nav>
 
-      <div class="work-box">
-        <h3>Comune di Santa Margherita di Belice</h3>
-        <p>
-          Manutenzione ordinaria e straordinaria degli impianti di pubblica illuminazione, sostituzione corpi
-          illuminanti e interventi urgenti su linee elettriche.
-        </p>
-      </div>
+<main class="page">
 
-      <div class="work-box">
-        <h3>Comune di Lercara Friddi</h3>
-        <p>
-          Adeguamento normativo degli impianti, sostituzione lampade e verifica tecnica dei quadri elettrici.
-        </p>
-      </div>
+  <header class="section">
+    <h1>Lavori Eseguiti</h1>
+    <p>
+      Una selezione dei principali interventi realizzati da Energia e Innovazione, tra impianti elettrici,
+      climatizzazione, pubblica illuminazione e soluzioni tecnologiche modulari.
+    </p>
+  </header>
 
-      <div class="work-box">
-        <h3>Comune di Roccapalumba</h3>
-        <p>
-          Interventi di manutenzione programmata e ripristino funzionalità su linee e punti luce.
-        </p>
-      </div>
+  <!-- PUBBLICA ILLUMINAZIONE -->
+  <section class="section">
+    <h2>Pubblica Illuminazione</h2>
 
-      <div class="work-box">
-        <h3>Comune di Castronovo di Sicilia</h3>
-        <p>
-          Manutenzione straordinaria, sostituzione corpi illuminanti e interventi di riparazione urgente.
-        </p>
-      </div>
-    </section>
+    <div class="work-box">
+      <h3>Comune di Santa Margherita di Belice</h3>
+      <p>Manutenzione ordinaria e straordinaria degli impianti di pubblica illuminazione.</p>
+    </div>
 
-    <section class="section">
-      <h2>Impianti Elettrici e Tecnologici</h2>
+    <div class="work-box">
+      <h3>Comune di Lercara Friddi</h3>
+      <p>Adeguamento normativo, sostituzione lampade e verifica tecnica dei quadri elettrici.</p>
+    </div>
 
-      <div class="work-box">
-        <h3>Installazioni civili e industriali</h3>
-        <p>
-          Realizzazione di impianti elettrici certificati per abitazioni, uffici, locali commerciali e capannoni.
-        </p>
-      </div>
+    <div class="work-box">
+      <h3>Comune di Roccapalumba</h3>
+      <p>Manutenzione programmata e ripristino funzionalità su linee e punti luce.</p>
+    </div>
 
-      <div class="work-box">
-        <h3>Impianti radiotelevisivi</h3>
-        <p>
-          Installazione e ottimizzazione di antenne e sistemi di ricezione per strutture private e aziendali.
-        </p>
-      </div>
-    </section>
+    <div class="work-box">
+      <h3>Comune di Castronovo di Sicilia</h3>
+      <p>Manutenzione straordinaria e interventi urgenti.</p>
+    </div>
+  </section>
 
-  </main>
-</body>
+  <!-- NUOVI LAVORI INSERITI -->
+  <section class="section">
+    <h2>Impianti Elettrici, Tecnologici e Industriali</h2>
+
+    <div class="work-box">
+      <h3>Partinico – Kosmos Viale dei Platani</h3>
+      <p>Lavori di impiantistica industriale per locali adibiti a ristorazione, immagini e divertimento.</p>
+    </div>
+
+    <div class="work-box">
+      <h3>Parco acquatico SPLASH – Balestrate (PA)</h3>
+      <p>Lavori di impiantistica industriale per l.b.m.b. srl.</p>
+    </div>
+
+    <div class="work-box">
+      <h3>Impianti fotovoltaici</h3>
+      <p>Installazione impianto fotovoltaico da 20 kW presso azienda e realizzazione di ulteriori impianti fotovoltaici per privati, inclusa gestione pratiche GSE.</p>
+    </div>
+
+    <div class="work-box">
+      <h3>Le.Il. – Partinico</h3>
+      <p>Costruzione impianto elettrico, videosorveglianza e automazione.</p>
+    </div>
+
+    <div class="work-box">
+      <h3>Giunta Costruzioni srl – Palermo</h3>
+      <p>Impianto civile domotico.</p>
+    </div>
+
+    <div class="work-box">
+      <h3>Scuola elementare – Alia (PA)</h3>
+      <p>Realizzazione impianto elettrico per Palazzolo Faro Rosario.</p>
+    </div>
+
+    <div class="work-box">
+      <h3>Forma.lab srl – Sede di Palermo</h3>
+      <p>Impianto elettrico e climatizzazione.</p>
+    </div>
+
+    <div class="work-box">
+      <h3>Consorzio ERAH – Castelvetrano</h3>
+      <p>Intervento manutentivo straordinario.</p>
+    </div>
+
+    <div class="work-box">
+      <h3>Costantino Immobiliare srl – Partinico</h3>
+      <p>Ampliamento impianto idrico ed elettrico, adeguamento normativo.</p>
+    </div>
+
+    <div class="work-box">
+      <h3>UIL Sicilia – Palermo</h3>
+      <p>Impianto di condizionamento presso sede regionale.</p>
+    </div>
+
+    <div class="work-box">
+      <h3>Europsys srl – Via Virgilio Modena</h3>
+      <p>Impianti tecnologici presso cimitero comunale di Borgetto e comando Vigili Urbani.</p>
+    </div>
+
+    <div class="work-box">
+      <h3>Luxtecnologie srls – Borgetto (PA)</h3>
+      <p>Installazione sistema di emergenza presso locali adibiti a scopo sociale.</p>
+    </div>
+
+    <div class="work-box">
+      <h3>Falegnameria Taormina – Montelepre (PA)</h3>
+      <p>Adeguamento normativo impianto industriale.</p>
+    </div>
+
+    <div class="work-box">
+      <h3>Contratti manutentivi</h3>
+      <p>Azienda attiva in contratti manutentivi per impianti realizzati.</p>
+    </div>
+
+    <div class="work-box">
+      <h3>Scuola media S.M.S. Corridoni – Bergamo</h3>
+      <p>Manutenzione impianto scolastico.</p>
+    </div>
+
+    <div class="work-box">
+      <h3>Palazzo Natoli – Palermo</h3>
+      <p>Restauro, ripristino, adeguamento normativo e climatizzazione impianti.</p>
+    </div>
+
+    <div class="work-box">
+      <h3>Campo Sportivo – Montelepre</h3>
+      <p>Installazioni modulari e impianti tecnologici.</p>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- FOOTER -->
 <footer style="background:#12324a; color:#fff; padding:40px 20px; margin-top:40px;">
   <div style="max-width:1100px; margin:0 auto; display:flex; flex-wrap:wrap; gap:40px;">
 
-    <!-- COLONNA 1 -->
     <div style="flex:1; min-width:220px;">
       <h3 style="margin-top:0; font-size:1.2rem;">Energia e Innovazione</h3>
       <p style="opacity:0.9;">
         Impianti elettrici, climatizzazione, pubblica illuminazione, soluzioni tecnologiche certificate, soluzioni modulari, porte REI rimovibili e allestimenti tecnici.
       </p>
-      <p style="opacity:0.9;">
-        P.IVA: 07023390821
-      </p>
+      <p style="opacity:0.9;">P.IVA: 07023390821</p>
     </div>
 
-    <!-- COLONNA 2 -->
     <div style="flex:1; min-width:220px;">
       <h3 style="margin-top:0; font-size:1.2rem;">Navigazione</h3>
       <p><a href="index.html" style="color:#fff; text-decoration:none;">Home</a></p>
@@ -130,7 +235,6 @@
       <p><a href="contatti.html" style="color:#fff; text-decoration:none;">Contatti</a></p>
     </div>
 
-    <!-- COLONNA 3 -->
     <div style="flex:1; min-width:220px;">
       <h3 style="margin-top:0; font-size:1.2rem;">Contatti</h3>
       <p style="opacity:0.9;">Telefono: +39.379.128.36.43</p>
@@ -145,5 +249,15 @@
     © 2024 Energia e Innovazione – Tutti i diritti riservati
   </div>
 </footer>
+
+<!-- SCRIPT MENU RESPONSIVE -->
+<script>
+const mobileMenu = document.getElementById("mobile-menu");
+const navMenu = document.querySelector(".nav-menu");
+
+mobileMenu.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+</script>
 
 </html>
