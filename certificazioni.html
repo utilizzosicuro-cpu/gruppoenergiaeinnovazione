@@ -20,41 +20,38 @@
 </head>
 
 <body>
-<nav style="
-  background:#12324a;
-  padding: 14px 0;
-  font-family: system-ui, sans-serif;
-">
-  <div style="
-    max-width:1400px;
-    margin:0 auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 20px;
-  ">
-    
-    <!-- LOGO / NOME AZIENDA -->
-    <div style="color:#fff; font-size:1.2rem; font-weight:600;">
+<nav class="navbar" style="background:#12324a; padding:14px 0; font-family:system-ui, sans-serif;">
+  <div class="nav-container" style="max-width:1400px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 20px;">
+
+    <!-- LOGO -->
+    <div class="nav-logo" style="color:#fff; font-size:1.2rem; font-weight:600;">
       Energia e Innovazione
     </div>
 
-    <!-- MENU -->
-    <div style="display:flex; gap:22px;">
-       <a href="index.html" style="color:#fff; text-decoration:none; font-size:1rem;">Home</a>
-      <a href="chi-siamo.html" style="color:#fff; text-decoration:none; font-size:1rem;">Chi Siamo</a>
-      <a href="certificazioni.html" style="color:#fff; text-decoration:none; font-size:1rem;">Certificazioni</a>
-	  <a href="lavori-eseguiti.html" style="color:#fff; text-decoration:none;">Lavori Eseguiti</a>
-      <a href="documentazione.html" style="color:#fff; text-decoration:none;">Documentazione</a>
-      <a href="preventivi-forniture.html" style="color:#fff; text-decoration:none; font-size:1rem;">Preventivi e Forniture</a>
-      <a href="assistenza-tecnica.html" style="color:#fff; text-decoration:none; font-size:1rem;">Assistenza Tecnica</a>
-	  <a href="dati-aziendali.html" style="color:#fff; text-decoration:none; font-size:0.95rem;">Dati Aziendali</a>
-      <a href="network-gruppoenergiaeinnovazione.html" style="color:#fff; text-decoration:none; font-size:0.95rem;">Network</a>
-      <a href="contatti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Contatti</a>
+    <!-- HAMBURGER -->
+    <div class="nav-toggle" id="mobile-menu" style="display:none; flex-direction:column; cursor:pointer;">
+      <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
+      <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
+      <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
     </div>
+
+    <!-- MENU -->
+    <ul class="nav-menu" style="display:flex; gap:22px; list-style:none; margin:0; padding:0;">
+      <li><a href="index.html" style="color:#fff; text-decoration:none; font-size:1rem;">Home</a></li>
+      <li><a href="chi-siamo.html" style="color:#fff; text-decoration:none; font-size:1rem;">Chi Siamo</a></li>
+      <li><a href="certificazioni.html" style="color:#fff; text-decoration:none; font-size:1rem;">Certificazioni</a></li>
+      <li><a href="lavori-eseguiti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Lavori Eseguiti</a></li>
+      <li><a href="documentazione.html" style="color:#fff; text-decoration:none; font-size:1rem;">Documentazione</a></li>
+      <li><a href="preventivi-forniture.html" style="color:#fff; text-decoration:none; font-size:1rem;">Preventivi e Forniture</a></li>
+      <li><a href="assistenza-tecnica.html" style="color:#fff; text-decoration:none; font-size:1rem;">Assistenza Tecnica</a></li>
+      <li><a href="dati-aziendali.html" style="color:#fff; text-decoration:none; font-size:1rem;">Dati Aziendali</a></li>
+      <li><a href="network-gruppoenergiaeinnovazione.html" style="color:#fff; text-decoration:none; font-size:1rem;">Network</a></li>
+      <li><a href="contatti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Contatti</a></li>
+    </ul>
 
   </div>
 </nav>
+
 
   <main class="page">
 
