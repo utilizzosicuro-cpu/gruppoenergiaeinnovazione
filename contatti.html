@@ -6,20 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Contatta Energia e Innovazione di Salvia Benedetto per preventivi, assistenza tecnica e informazioni sui servizi." />
   <style>
-    body { font-family: system-ui, sans-serif; margin: 0; padding: 0; background: #f7f7f7; color: #222; line-height: 1.6; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #222; background: #f7f7f7; }
     .page { max-width: 960px; margin: 0 auto; padding: 32px 16px 48px; background: #fff; }
-    h1, h2, h3 { color: #12324a; margin-top: 0; }
+    h1, h2 { color: #12324a; margin-top: 0; }
     h1 { font-size: 2rem; margin-bottom: 0.5rem; }
     h2 { font-size: 1.4rem; margin-top: 2rem; }
     p { margin: 0.4rem 0 0.8rem; }
-    ul { padding-left: 1.2rem; }
-    li { margin-bottom: 0.4rem; }
     .section { margin-bottom: 2rem; }
-    .work-box { background: #f0f6fa; border-left: 4px solid #1b7bb8; padding: 1rem 1.25rem; border-radius: 4px; margin-bottom: 1.5rem; }
+    .contact-box { background: #f0f6fa; border-left: 4px solid #1b7bb8; padding: 1rem 1.25rem; border-radius: 4px; margin-bottom: 1.5rem; }
+    .label { font-weight: 600; }
+    form { margin-top: 1.5rem; }
+    input, textarea { width: 100%; padding: 10px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+    button { background: #1b7bb8; color: #fff; padding: 12px 20px; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; }
+    button:hover { background: #155f8f; }
 
-    /* NAVBAR RESPONSIVE */
+    /* NAVBAR */
+    .navbar { background:#12324a; padding:14px 0; font-family:system-ui, sans-serif; position:relative; z-index:1000; }
+    .nav-container { max-width:1400px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 20px; }
+    .nav-logo { color:#fff; font-size:1.2rem; font-weight:600; }
+    .nav-menu { display:flex; gap:22px; list-style:none; margin:0; padding:0; align-items:center; }
+    .nav-menu a { color:#fff; text-decoration:none; font-size:1rem; padding:8px 6px; white-space:nowrap; display:inline-block; }
+    .nav-toggle { display:none; cursor:pointer; flex-direction:column; gap:4px; }
+    .nav-toggle .bar { height:3px; width:25px; background:#fff; display:block; border-radius:2px; }
+
+    /* Responsive behaviour */
     @media (max-width: 900px) {
-      .nav-toggle { display: flex !important; }
+      .nav-toggle { display:flex; }
       .nav-menu {
         position: absolute;
         top: 60px;
@@ -28,63 +40,57 @@
         width: 100%;
         flex-direction: column;
         text-align: center;
-        padding: 20px 0;
-        display: none !important;
+        padding: 12px 0;
+        display: none;
       }
-      .nav-menu.active { display: flex !important; }
-      .nav-menu li { padding: 10px 0; }
+      .nav-menu.active { display:flex; }
+      .nav-menu li { padding: 8px 0; }
+      .nav-menu a { display:block; padding:10px 16px; }
     }
 
-    /* Prevent menu items from wrapping and enable horizontal scroll on narrow screens */
-    .nav-menu {
-      flex-wrap: nowrap !important;
-      overflow-x: auto !important;
-      -webkit-overflow-scrolling: touch;
-      padding: 0 8px !important;
-      gap: 16px !important;
-    }
+    /* Footer */
+    footer { background:#12324a; color:#fff; padding:40px 20px; margin-top:40px; }
+    footer a { color:#fff; text-decoration:none; }
+    footer .footer-grid { max-width:1100px; margin:0 auto; display:flex; flex-wrap:wrap; gap:40px; }
+    footer h3 { margin-top:0; font-size:1.2rem; }
+    footer p { opacity:0.9; margin:6px 0; }
 
-    /* Prevent link text from breaking to multiple lines */
-    .nav-menu a {
-      white-space: nowrap !important;
-      display: inline-block !important;
-      padding: 8px 6px !important;
-      font-size: 0.98rem !important;
+    @media (max-width:700px) {
+      footer .footer-grid { flex-direction:column; }
     }
   </style>
 </head>
 
 <body>
 
-<nav class="navbar" style="background:#12324a; padding:14px 0; font-family:system-ui, sans-serif;">
-  <div class="nav-container" style="max-width:1400px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 20px;">
+  <!-- NAVBAR RESPONSIVE -->
+  <nav class="navbar" role="navigation" aria-label="Menu principale">
+    <div class="nav-container">
+      <div class="nav-logo">Energia e Innovazione</div>
 
-    <div class="nav-logo" style="color:#fff; font-size:1.2rem; font-weight:600;">
-      Energia e Innovazione
+      <!-- Hamburger toggle -->
+      <div id="mobile-menu" class="nav-toggle" role="button" aria-label="Apri menu" aria-expanded="false" tabindex="0">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <!-- Menu principale -->
+      <ul class="nav-menu" role="menubar" aria-label="Navigazione principale">
+        <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+        <li role="none"><a role="menuitem" href="chi-siamo.html">Chi Siamo</a></li>
+        <li role="none"><a role="menuitem" href="certificazioni.html">Certificazioni</a></li>
+        <li role="none"><a role="menuitem" href="lavori-eseguiti.html">Lavori Eseguiti</a></li>
+        <li role="none"><a role="menuitem" href="documentazione.html">Documentazione</a></li>
+        <li role="none"><a role="menuitem" href="preventivi-forniture.html">Preventivi e Forniture</a></li>
+        <li role="none"><a role="menuitem" href="assistenza-tecnica.html">Assistenza Tecnica</a></li>
+        <li role="none"><a role="menuitem" href="manutenzione-contratti.html">Manutenzione e Contratti</a></li>
+        <li role="none"><a role="menuitem" href="dati-aziendali.html">Dati Aziendali</a></li>
+        <li role="none"><a role="menuitem" href="network-gruppoenergiaeinnovazione.html">Network</a></li>
+        <li role="none"><a role="menuitem" href="contatti.html">Contatti</a></li>
+      </ul>
     </div>
-
-    <div class="nav-toggle" id="mobile-menu" style="display:none; flex-direction:column; cursor:pointer;">
-      <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
-      <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
-      <span class="bar" style="height:3px; width:25px; background:#fff; margin:4px 0;"></span>
-    </div>
-
-    <ul class="nav-menu" style="display:flex; gap:22px; list-style:none; margin:0; padding:0;">
-      <li><a href="index.html" style="color:#fff; text-decoration:none; font-size:1rem;">Home</a></li>
-      <li><a href="chi-siamo.html" style="color:#fff; text-decoration:none; font-size:1rem;">Chi Siamo</a></li>
-      <li><a href="certificazioni.html" style="color:#fff; text-decoration:none; font-size:1rem;">Certificazioni</a></li>
-      <li><a href="lavori-eseguiti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Lavori Eseguiti</a></li>
-      <li><a href="documentazione.html" style="color:#fff; text-decoration:none; font-size:1rem;">Documentazione</a></li>
-      <li><a href="preventivi-forniture.html" style="color:#fff; text-decoration:none; font-size:1rem;">Preventivi e Forniture</a></li>
-      <li><a href="assistenza-tecnica.html" style="color:#fff; text-decoration:none; font-size:1rem;">Assistenza Tecnica</a></li>
-	   <li><a href="manutenzione-contratti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Manutenzione e Contratti</a></li>
-      <li><a href="dati-aziendali.html" style="color:#fff; text-decoration:none; font-size:1rem;">Dati Aziendali</a></li>
-      <li><a href="network-gruppoenergiaeinnovazione.html" style="color:#fff; text-decoration:none; font-size:1rem;">Network</a></li>
-      <li><a href="contatti.html" style="color:#fff; text-decoration:none; font-size:1rem;">Contatti</a></li>
-    </ul>
-
-  </div>
-</nav>
+  </nav>
 
   <main class="page">
 
@@ -99,10 +105,10 @@
     <section class="section">
       <h2>Recapiti</h2>
       <div class="contact-box">
-        <p><span class="label">Telefono:</span> +39.379.128.36.43</p>
-        <p><span class="label">Email:</span> info@gruppoenergiaeinnovazione.it</p>
+        <p><span class="label">Telefono:</span> &lt;inserire numero di telefono&gt;</p>
+        <p><span class="label">Email:</span> &lt;inserire email&gt;</p>
         <p><span class="label">PEC:</span> ide.sd@pec.it</p>
-        <p><span class="label">Sede operativa:</span> Contrada Incastrone, 90047 Partinico (PA)</p>
+        <p><span class="label">Sede operativa:</span> Contrada Incastrone S.N.C., 90047 Partinico (PA)</p>
         <p><span class="label">Orari:</span> Lun–Ven 8:30–18:00</p>
       </div>
     </section>
@@ -111,6 +117,7 @@
       <h2>Modulo di Contatto</h2>
       <p>Compila il modulo per inviare una richiesta. Ti risponderemo il prima possibile.</p>
 
+      <!-- Form mantenuto esattamente come fornito -->
       <form action="#" method="post">
         <input type="text" name="nome" placeholder="Nome e Cognome" required />
         <input type="email" name="email" placeholder="Email" required />
@@ -121,131 +128,86 @@
     </section>
 
   </main>
-</body>
-<footer style="background:#12324a; color:#fff; padding:40px 20px; margin-top:40px;">
-<p style="margin-top:12px;">
-  <a href="privacy-policy.html" style="color:#fff; text-decoration:none;">Privacy</a> |
-  <a href="cookie-policy.html" style="color:#fff; text-decoration:none;">Cookie Policy</a>
-</p>
 
-  <div style="max-width:1100px; margin:0 auto; display:flex; flex-wrap:wrap; gap:40px;">
+  <!-- FOOTER COMPLETO -->
+  <footer>
+    <p style="margin-top:12px; text-align:center;">
+      <a href="privacy.html">Privacy</a> |
+      <a href="cookie-policy.html">Cookie Policy</a>
+    </p>
 
-    <!-- COLONNA 1 -->
-    <div style="flex:1; min-width:220px;">
-      <h3 style="margin-top:0; font-size:1.2rem;">Energia e Innovazione</h3>
-      <p style="opacity:0.9;">
-        Impianti elettrici, climatizzazione, pubblica illuminazione, soluzioni tecnologiche certificate, soluzioni modulari, porte REI rimovibili e allestimenti tecnici.
-      </p>
-      <p style="opacity:0.9;">
-        P.IVA: 07023390821
-      </p>
+    <div class="footer-grid">
+      <div style="flex:1; min-width:220px;">
+        <h3>Energia e Innovazione</h3>
+        <p>Impianti elettrici, climatizzazione, pubblica illuminazione, soluzioni tecnologiche certificate, soluzioni modulari e allestimenti tecnici.</p>
+        <p>P.IVA: 07023390821</p>
+      </div>
+
+      <div style="flex:1; min-width:220px;">
+        <h3>Navigazione</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="chi-siamo.html">Chi Siamo</a></p>
+        <p><a href="certificazioni.html">Certificazioni</a></p>
+        <p><a href="lavori-eseguiti.html">Lavori Eseguiti</a></p>
+        <p><a href="preventivi-forniture.html">Preventivi e Forniture</a></p>
+        <p><a href="assistenza-tecnica.html">Assistenza Tecnica</a></p>
+        <p><a href="documentazione.html">Documentazione</a></p>
+        <p><a href="contatti.html">Contatti</a></p>
+      </div>
+
+      <div style="flex:1; min-width:220px;">
+        <h3>Contatti</h3>
+        <p>Telefono: +39.379.128.36.43</p>
+        <p>Email: info@gruppoenergiaeinnovazione.it</p>
+        <p>PEC: ide.sd@pec.it</p>
+        <p>Sede: Contrada Incastrone, Partinico (PA)</p>
+      </div>
     </div>
 
-    <!-- COLONNA 2 -->
-    <div style="flex:1; min-width:220px;">
-      <h3 style="margin-top:0; font-size:1.2rem;">Navigazione</h3>
-      <p><a href="index.html" style="color:#fff; text-decoration:none;">Home</a></p>
-      <p><a href="chi-siamo.html" style="color:#fff; text-decoration:none;">Chi Siamo</a></p>
-      <p><a href="certificazioni.html" style="color:#fff; text-decoration:none;">Certificazioni</a></p>
-      <p><a href="lavori-eseguiti.html" style="color:#fff; text-decoration:none;">Lavori Eseguiti</a></p>
-      <p><a href="preventivi-forniture.html" style="color:#fff; text-decoration:none;">Preventivi e Forniture</a></p>
-      <p><a href="assistenza-tecnica.html" style="color:#fff; text-decoration:none;">Assistenza Tecnica</a></p>
-      <p><a href="documentazione.html" style="color:#fff; text-decoration:none;">Documentazione</a></p>
-      <p><a href="contatti.html" style="color:#fff; text-decoration:none;">Contatti</a></p>
+    <div style="text-align:center; margin-top:30px; opacity:0.7; font-size:0.9rem;">
+      © 2024 Energia e Innovazione – Tutti i diritti riservati
     </div>
+  </footer>
 
-    <!-- COLONNA 3 -->
-    <div style="flex:1; min-width:220px;">
-      <h3 style="margin-top:0; font-size:1.2rem;">Contatti</h3>
-      <p style="opacity:0.9;">Telefono: +39.379.128.36.43</p>
-      <p style="opacity:0.9;">Email: info@gruppoenergiaeinnovazione.it</p>
-      <p style="opacity:0.9;">PEC: ide.sd@pec.it</p>
-      <p style="opacity:0.9;">Sede: Contrada Incastrone, Partinico (PA)</p>
-    </div>
-
-  </div>
-
-  <div style="text-align:center; margin-top:30px; opacity:0.7; font-size:0.9rem;">
-    © 2024 Energia e Innovazione – Tutti i diritti riservati
-  </div>
-</footer>
-<!-- SCRIPT MENU RESPONSIVE + mailto submit -->
+  <!-- Script robusto per il toggle hamburger -->
   <script>
-    const mobileMenu = document.getElementById("mobile-menu");
-    const navMenu = document.querySelector(".nav-menu");
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const navMenus = document.querySelectorAll('.nav-menu');
 
-    mobileMenu.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    });
+      if (!mobileMenu || navMenus.length === 0) return;
 
-    // Mailto submission: collect form data, validate, open mail client with prefilled email
-    (function() {
-      const form = document.getElementById('contactForm');
-      const sendBtn = document.getElementById('sendBtn');
-      const recipient = 'info@gruppoenergiaeinnovazione.it';
-
-      function encode(s) {
-        return encodeURIComponent(s || '');
+      function findNavMenu() {
+        for (const nm of navMenus) {
+          if (mobileMenu.closest('nav') && mobileMenu.closest('nav').contains(nm)) return nm;
+        }
+        return navMenus[0];
       }
 
-      form.addEventListener('submit', function(e) {
+      const navMenu = findNavMenu();
+
+      // Ensure ARIA attributes for accessibility
+      mobileMenu.setAttribute('role', 'button');
+      mobileMenu.setAttribute('aria-label', mobileMenu.getAttribute('aria-label') || 'Apri menu');
+      mobileMenu.setAttribute('aria-expanded', mobileMenu.getAttribute('aria-expanded') || 'false');
+      mobileMenu.tabIndex = 0;
+
+      mobileMenu.addEventListener('click', function(e) {
         e.preventDefault();
-
-        const nome = document.getElementById('nome').value.trim();
-        const azienda = document.getElementById('azienda').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const telefono = document.getElementById('telefono').value.trim();
-        const servizio = document.getElementById('servizio').value.trim();
-        const messaggio = document.getElementById('messaggio').value.trim();
-        const privacy = document.getElementById('privacy').checked;
-
-        // Basic validation
-        if (!nome) {
-          alert('Inserisci Nome e Cognome.');
-          document.getElementById('nome').focus();
-          return;
-        }
-        if (!email) {
-          alert('Inserisci un indirizzo email valido.');
-          document.getElementById('email').focus();
-          return;
-        }
-        if (!messaggio) {
-          alert('Inserisci il messaggio o i dettagli tecnici della richiesta.');
-          document.getElementById('messaggio').focus();
-          return;
-        }
-        if (!privacy) {
-          alert('È necessario accettare il trattamento dei dati personali per procedere.');
-          document.getElementById('privacy').focus();
-          return;
-        }
-
-        // Build subject and body
-        const subjectParts = ['Richiesta da', nome];
-        if (servizio) subjectParts.push('-', servizio);
-        const subject = subjectParts.join(' ');
-
-        let body = '';
-        body += 'Nome e Cognome: ' + nome + '\\n';
-        if (azienda) body += 'Azienda: ' + azienda + '\\n';
-        body += 'Email: ' + email + '\\n';
-        if (telefono) body += 'Telefono: ' + telefono + '\\n';
-        if (servizio) body += 'Servizio di interesse: ' + servizio + '\\n';
-        body += '\\nDettagli della richiesta:\\n' + messaggio + '\\n\\n';
-        body += '---\\nInvio da modulo contatti sito web.';
-
-        // Construct mailto link
-        const mailto = 'mailto:' + recipient
-          + '?subject=' + encode(subject)
-          + '&body=' + encode(body);
-
-        // Open mail client
-        window.location.href = mailto;
+        navMenu.classList.toggle('active');
+        const expanded = mobileMenu.getAttribute('aria-expanded') === 'true';
+        mobileMenu.setAttribute('aria-expanded', String(!expanded));
       });
-    })();
+
+      // Support keyboard toggle (Enter / Space)
+      mobileMenu.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          mobileMenu.click();
+        }
+      });
+    });
   </script>
 
 </body>
-
 </html>
